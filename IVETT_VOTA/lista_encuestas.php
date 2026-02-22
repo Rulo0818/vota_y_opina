@@ -6,7 +6,7 @@ require_once 'config/db.php';
 $sql = "SELECT e.*, u.nombre as creador FROM encuestas e JOIN usuarios u ON e.creador_usuario_id = u.usuario_id";
 
 if ($_SESSION['rol'] !== 'admin') {
-    // Si no es admin, solo ve las suyas
+    // Si no es admin
     $sql .= " WHERE e.creador_usuario_id = :uid";
 }
 
