@@ -7,8 +7,6 @@ if (isset($_GET['id']) && isset($_GET['eid'])) {
     $encuesta_id = $_GET['eid'];
 
     try {
-        // En un caso real, verificar que la encuesta pertenezca al usuario aquí.
-        // DELETE CASCADA manual si no está en BD (aunque MySQL lo soporta si está configurado, aquí lo hacemos manual por seguridad)
         
         $pdo->beginTransaction();
 
