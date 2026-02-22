@@ -37,7 +37,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // Si es escala (1-5), guarda en respuesta_texto o opcion_id?
                 // Tabla respuestas: opcion_id (FK), respuesta_texto
                 // Si la pregunta es tipo 'escala', guardamos el valor en respuesta_texto, porque no hay ID de opción asociado a '1', '2'... a menos que creemos opciones.
-                // Pero mi editor de escala NO crea opciones en DB.
                 
                 // Consultar tipo de pregunta
                 $stmtType = $pdo->prepare("SELECT tipo_pregunta FROM preguntas WHERE pregunta_id = :qid");
